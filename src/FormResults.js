@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 function FormResults(props) {
-
+  console.log(props)
   return (
       <main>
-        <hr />
+        
         <h2>Entered information:</h2>
         <p>
           Your name: {props.state.firstName} {props.state.lastName}
