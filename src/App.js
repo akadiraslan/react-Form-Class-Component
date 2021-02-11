@@ -8,6 +8,7 @@ class App extends Component {
       firstName: "",
       lastName: "",
       age: "",
+      email : "",
       gender: "",
       destination: "",
       isVegan: false,
@@ -53,6 +54,13 @@ class App extends Component {
             value={this.state.age}
             onChange={this.handleChange}
             placeholder="Age"
+          />
+          <br />
+          <input
+            name="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+            placeholder="E-Mail"
           />
           <br />
 
@@ -137,6 +145,7 @@ class App extends Component {
           Your name: {this.state.firstName} {this.state.lastName}
         </p>
         <p>Your age: {this.state.age}</p>
+        <p>Your E-mail: {this.state.email}</p>
         <p>Your gender: {this.state.gender}</p>
         <p>Your destination: {this.state.destination}</p>
         <p>Your dietary restrictions:</p>
