@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 function FormResults(props) {
-  console.log(props)
   return (
       <main>
         

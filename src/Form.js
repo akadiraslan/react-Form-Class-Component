@@ -1,54 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    type === "checkbox"
-      ? this.setState({
-          [name]: checked
-        })
-      : this.setState({
-          [name]: value
-        });
-  }
-
-
-  render() {
+function Form (props) {
+    
     return (
       <main>
         <form>
           <input
             name="firstName"
-            value={this.props.state.firstName}
-            onChange={this.props.handleChange}
+            value={props.state.firstName}
+            onChange={props.handleChange}
             placeholder="First Name"
           />
           <br />
 
           <input
             name="lastName"
-            value={this.props.state.lastName}
-            onChange={this.props.handleChange}
+            value={props.state.lastName}
+            onChange={props.handleChange}
             placeholder="Last Name"
           />
           <br />
 
           <input
             name="age"
-            value={this.props.state.age}
-            onChange={this.props.handleChange}
+            value={props.state.age}
+            onChange={props.handleChange}
             placeholder="Age"
           />
           <br />
           <input
             name="email"
-            value={this.props.state.email}
-            onChange={this.props.handleChange}
+            value={props.state.email}
+            onChange={props.handleChange}
             placeholder="E-Mail"
           />
           <br />
@@ -58,8 +42,8 @@ class Form extends Component {
               type="radio"
               name="gender"
               value="male"
-              checked={this.props.state.gender === "male"}
-              onChange={this.props.handleChange}
+              checked={props.state.gender === "male"}
+              onChange={props.handleChange}
             />{" "}
             Male
           </label>
@@ -71,8 +55,8 @@ class Form extends Component {
               type="radio"
               name="gender"
               value="female"
-              checked={this.props.state.gender === "female"}
-              onChange={this.props.handleChange}
+              checked={props.state.gender === "female"}
+              onChange={props.handleChange}
             />{" "}
             Female
           </label>
@@ -80,9 +64,9 @@ class Form extends Component {
           <br />
 
           <select
-            value={this.props.state.destination}
+            value={props.state.destination}
             name="destination"
-            onChange={this.props.handleChange}
+            onChange={props.handleChange}
           >
             <option value="">-- Please Choose a destination --</option>
             <option value="germany">Germany</option>
@@ -97,8 +81,8 @@ class Form extends Component {
             <input
               type="checkbox"
               name="isVegan"
-              onChange={this.props.handleChange}
-              checked={this.props.state.isVegan}
+              onChange={props.handleChange}
+              checked={props.state.isVegan}
             />{" "}
             Vegan?
           </label>
@@ -108,8 +92,8 @@ class Form extends Component {
             <input
               type="checkbox"
               name="isKosher"
-              onChange={this.props.handleChange}
-              checked={this.props.state.isKosher}
+              onChange={props.handleChange}
+              checked={props.state.isKosher}
             />{" "}
             Kosher?
           </label>
@@ -119,8 +103,8 @@ class Form extends Component {
             <input
               type="checkbox"
               name="isLactoseFree"
-              onChange={this.props.handleChange}
-              checked={this.props.state.isLactoseFree}
+              onChange={props.handleChange}
+              checked={props.state.isLactoseFree}
             />{" "}
             Lactose Free?
           </label>
@@ -131,7 +115,7 @@ class Form extends Component {
         
       </main>
     );
-  }
+  
 }
 
 export default Form;
