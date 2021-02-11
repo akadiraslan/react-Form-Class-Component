@@ -5,8 +5,12 @@ function Form (props) {
     
     return (
       <main>
+      <div>
+      
         <form>
           <input
+            type="text" 
+            class="form-control"
             name="firstName"
             value={props.state.firstName}
             onChange={props.handleChange}
@@ -15,6 +19,8 @@ function Form (props) {
           <br />
 
           <input
+            type="text" 
+            class="form-control"
             name="lastName"
             value={props.state.lastName}
             onChange={props.handleChange}
@@ -23,6 +29,8 @@ function Form (props) {
           <br />
 
           <input
+            type="text" 
+            class="form-control"
             name="age"
             value={props.state.age}
             onChange={props.handleChange}
@@ -30,6 +38,8 @@ function Form (props) {
           />
           <br />
           <input
+            type="text" 
+            class="form-control"
             name="email"
             value={props.state.email}
             onChange={props.handleChange}
@@ -112,7 +122,7 @@ function Form (props) {
 
           <button>Submit</button>
         </form>
-        
+        </div>
       </main>
     );
   
